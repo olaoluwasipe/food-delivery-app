@@ -2,9 +2,9 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 
-const Button = ({text, style}) => {
+const Button = ({text, style, onPress}) => {
   return (
-    <TouchableOpacity style={style}>
+    <TouchableOpacity style={style} onPress={onPress}>
         <LinearGradient
             colors={['#53E88B','#15BE77']}
             style={{ paddingVertical: 20, paddingHorizontal: 40, alignItems: 'center', borderRadius: 5 }}

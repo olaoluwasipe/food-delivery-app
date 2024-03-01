@@ -13,7 +13,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // SCREENS IMPORT
 import Home from "./screens/Home";
 import Navigator from './Navigator';
-import Welcome from './screens/Welcome';
+import Welcome from './screens/onboarding/Welcome';
+import Onboarding from './screens/onboarding/Onboarding';
+import SignUp from './screens/sign/SignUp';
 // import Search from './screens/Search';
 // import Library from './screens/Library';
 // import MangaView from './screens/MangaView';
@@ -79,6 +81,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={startPoint}>
         <Stack.Screen name="Navigator" component={Navigator} options={{ title: 'navigator' }} />
         {/* Sign Up Logic */}
+        <Stack.Screen name="SignUp" component={SignUp} options={{ title: 'Sign Up' }} />
         <Stack.Screen name='Home' component={Home} options={{tilte: 'Home'}} />
         {/* <Stack.Screen name='Library' component={Library} options={{title: 'Library'}} />
         <Stack.Screen name='Search' component={Search} options={{title: 'Search'}} />
@@ -86,6 +89,7 @@ const App = () => {
         <Stack.Screen name='TopMangaView' component={TopMangaView} options={{title: 'Top Manga View'}} />
         <Stack.Screen name='ViewManga' component={ViewManga} options={{title: 'View Manga'}} /> */}
         <Stack.Screen name='Welcome' component={Welcome} />
+        <Stack.Screen name='Onboarding' component={Onboarding} />
       </Stack.Navigator>
     </NavigationContainer>
   );
